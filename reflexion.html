@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<theme-switcher></theme-switcher>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réflexion | Dorian Decitre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+    <script src="components.js" defer></script>
+
+</head>
+<body>
+
+<canvas id="lightning-canvas"></canvas>
+
+<header id="dynamic-header" class="fade-up show">
+    <nav>
+        <button class="menu-burger" id="menu-toggle" aria-label="Menu">
+            <span class="barre"></span>
+            <span class="barre"></span>
+            <span class="barre"></span>
+        </button>
+        <ul id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="experience.html">Expérience</a></li>
+            <li><a href="reflexion.html" class="active">Réflexion</a></li>
+            <li><a href="references.html">Références</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <div class="page-header fade-up show">
+        <h1 class="page-title">Réflexion</h1>
+        <p class="page-subtitle">Bilan critique et personnel de mon parcours en BUT2 et de mon stage.</p>
+    </div>
+
+    <div class="reflexion-layout">
+
+        <!-- CONTENU PRINCIPAL -->
+        <div class="reflexion-main">
+
+            <div class="reflexion-block fade-up">
+                <div class="reflexion-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h2>Ce que la formation m'a apporté</h2>
+                <p>Le BUT RACA m'a offert une véritable vision globale de l'informatique : il ne s'agit pas seulement de
+                    coder, mais de comprendre les architectures, les enjeux organisationnels et la logique derrière
+                    chaque choix technique. Les modules Java EE et bases de données ont particulièrement structuré ma
+                    façon d'aborder un problème.</p>
+                <p>La pédagogie par projets m'a forcé à sortir de ma zone de confort, à collaborer et à rendre des
+                    livrables dans des délais contraints — une simulation fidèle du monde professionnel qui s'est
+                    révélée précieuse lors du stage.</p>
+            </div>
+
+            <div class="reflexion-block fade-up">
+                <div class="reflexion-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h2>Le stage : décalage et confirmation</h2>
+                <p>En arrivant chez A2LDS, j'ai immédiatement ressenti le décalage entre la théorie et la réalité de
+                    terrain. La gestion d'une base de code existante, le respect des conventions maison, la pression des
+                    bugs en production : autant de situations que l'université simule difficilement.</p>
+                <p>Ce stage a néanmoins confirmé mon attrait pour le développement applicatif. La mission de signature
+                    PDF avec Adobe m'a particulièrement marqué : elle combinait cryptographie, logique métier et enjeux
+                    légaux. Exactement le type de défi que je cherche à relever.</p>
+            </div>
+
+            <div class="reflexion-block fade-up">
+                <div class="reflexion-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h2>Axes de progression identifiés</h2>
+                <p>J'ai pris conscience de lacunes sur lesquelles je dois progresser : la communication technique vers
+                    des non-développeurs, la rédaction de documentation claire, et la gestion du stress face à un bug
+                    bloquant en production.</p>
+                <p>Sur le plan technique, je souhaite approfondir les architectures microservices, le DevOps (CI/CD,
+                    conteneurisation Docker) et le développement front-end moderne avec des frameworks comme React ou
+                    Vue, pour élargir mon profil full-stack.</p>
+            </div>
+
+            <div class="reflexion-block fade-up">
+                <div class="reflexion-icon"><i class="fa-solid fa-compass"></i></div>
+                <h2>Perspectives & projet professionnel</h2>
+                <p>Ce stage et ma veille technologique constante ont cristallisé mon ambition : évoluer vers le métier
+                    d'<strong>Ingénieur IA</strong>. Je souhaite aller plus loin que le développement logiciel classique
+                    en concevant et en intégrant des modèles d'intelligence artificielle pour créer des systèmes
+                    vraiment intelligents et autonomes.</p>
+                <p>Pour concrétiser ce projet, une poursuite d'études en Master ou en École d'Ingénieur avec une
+                    spécialisation en <strong>Intelligence Artificielle et Data Science</strong> est la suite logique.
+                    Cela me permettra d'acquérir la base mathématique et algorithmique indispensable à cette expertise.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="reflexion-sidebar">
+
+            <div class="insight-card fade-up">
+                <h4><i class="fa-solid fa-code"></i> La règle du Clean Code</h4>
+                <blockquote>« N'importe quel idiot peut écrire du code qu'un ordinateur comprend. Les bons programmeurs
+                    écrivent du code que les humains peuvent comprendre. »
+                </blockquote>
+                <span>— Martin Fowler - Pionnier de l'ingénierie logicielle</span>
+            </div>
+
+            <div class="insight-card fade-up">
+                <h4><i class="fa-solid fa-chart-bar"></i> En chiffres</h4>
+                <ul class="stats-list">
+                    <li><strong>8</strong> semaines de stage</li>
+                    <li><strong>2</strong> missions majeures</li>
+                    <li><strong>+8</strong> technologies utilisées</li>
+                    <li><strong>2</strong> déploiements en production</li>
+                    <li><strong>1</strong> certification PDF livrée</li>
+                </ul>
+            </div>
+
+            <div class="insight-card fade-up">
+                <h4><i class="fa-solid fa-lightbulb"></i> Compétences révélées</h4>
+                <div class="badge-list">
+                    <span class="insight-badge">Adaptabilité</span>
+                    <span class="insight-badge">Rigueur</span>
+                    <span class="insight-badge">Curiosité</span>
+                    <span class="insight-badge">Autonomie</span>
+                    <span class="insight-badge">Communication</span>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+</body>
+<site-footer></site-footer>
+
+</html>

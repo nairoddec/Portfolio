@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<theme-switcher></theme-switcher>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expérience | Dorian Decitre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+    <script src="components.js" defer></script>
+
+</head>
+<body>
+
+<canvas id="lightning-canvas"></canvas>
+
+<header id="dynamic-header" class="fade-up show">
+    <nav>
+        <button class="menu-burger" id="menu-toggle" aria-label="Menu">
+            <span class="barre"></span>
+            <span class="barre"></span>
+            <span class="barre"></span>
+        </button>
+        <ul id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="experience.html" class="active">Expérience</a></li>
+            <li><a href="reflexion.html">Réflexion</a></li>
+            <li><a href="references.html">Références</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <div class="page-header fade-up show">
+        <h1 class="page-title">Expérience</h1>
+        <p class="page-subtitle">Monde professionnel — stage et projets académiques.</p>
+    </div>
+
+    <div class="exp-context fade-up">
+        <div class="exp-context-inner">
+            <div class="exp-badge"><i class="fa-solid fa-building"></i></div>
+            <div>
+                <h2><span class="highlight">A2LDS</span> — Stage Développeur</h2>
+                <p class="exp-meta">Prestataire informatique · Bornel · Janvier – Mars 2026 · 8 semaines</p>
+                <p class="exp-desc">Développement et maintenance évolutive d'une application de gestion (ERP/CRM) en
+                    Java EE. J'ai notamment réalisé la refonte sécurisée de l'Espace Client à l'aide des
+                    composants JSF/PrimeFaces. En parallèle, suite à la dépréciation de WMIC par
+                    Microsoft, j'ai conçu de A à Z une solution d'audit matériel et logiciel hybride (Batch et
+                    PowerShell) générant des rapports au format JSON.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-heading fade-up">Missions clés</h2>
+
+    <div class="mission-grid">
+
+        <div class="mission-card fade-up">
+            <div class="mission-number">01</div>
+            <div class="mission-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h3>Outil d'Audit Hybride (Scripting)</h3>
+            <p>Remplacement de l'outil obsolète WMIC par une solution autonome combinant Batch et PowerShell. Extraction
+                exhaustive des données matérielles et logicielles des postes clients, puis formatage algorithmique
+                strict en JSON pour alimenter le tableau de bord web de l'entreprise.</p>
+            <div class="mission-tags">
+                <span class="tag">Batch / PowerShell</span>
+                <span class="tag">JSON</span>
+                <span class="tag">Parsing</span>
+                <span class="tag">WMIC</span>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; justify-content: flex-end;">
+                <a href="picture/A2LDS_1.png" target="_blank" title="Voir l'interface web d'audit"
+                   style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent-live); text-decoration: none; font-size: 0.85rem; font-weight: bold; background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid var(--accent-live); transition: 0.3s;"><i
+                        class="fa-solid fa-image"></i> Voir la capture</a>
+            </div>
+        </div>
+
+        <div class="mission-card fade-up">
+            <div class="mission-number">02</div>
+            <div class="mission-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Refonte Espace Client (UI/UX)</h3>
+            <p>Transformation de vues d'administration complexes en un portail client intuitif et sécurisé. Création de
+                "Composants Composites" réutilisables avec PrimeFaces (cartes de devis, commandes) pour respecter le
+                principe DRY (Don't Repeat Yourself) et centraliser le design.</p>
+            <div class="mission-tags">
+                <span class="tag">Java EE</span>
+                <span class="tag">JSF / PrimeFaces</span>
+                <span class="tag">Composants Composites</span>
+                <span class="tag">DRY</span>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; justify-content: flex-end;">
+                <a href="picture/A2LDS_2.png" target="_blank" title="Voir la refonte de l'Espace Client"
+                   style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent-live); text-decoration: none; font-size: 0.85rem; font-weight: bold; background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid var(--accent-live); transition: 0.3s;"><i
+                        class="fa-solid fa-image"></i> Voir la capture</a>
+            </div>
+        </div>
+
+        <div class="mission-card fade-up">
+            <div class="mission-number">03</div>
+            <div class="mission-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3>Cycle de vie & Visionneuse PDF</h3>
+            <p>Gestion dynamique du cycle de vie des objets JSF : verrouillage automatique des formulaires en mode
+                lecture seule selon le contexte. Intégration d'une visionneuse PDF native permettant la consultation des
+                factures et devis directement dans l'application sans forcer le téléchargement.</p>
+            <div class="mission-tags">
+                <span class="tag">Cycle de vie JSF</span>
+                <span class="tag">Ségrégation des données</span>
+                <span class="tag">Visionneuse native</span>
+                <span class="tag">Sécurité</span>
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="section-heading fade-up" style="margin-top: 5rem;">Projets Académiques & Réalisations</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card fade-up">
+            <div class="project-header">
+                <div class="project-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <div class="project-links">
+                    <a href="picture/cisco.png" class="project-link" title="Voir l'architecture" target="_blank">
+                        <i class="fa-solid fa-image"></i>
+                    </a>
+                </div>
+            </div>
+            <h3>Infrastructure Réseau Cisco</h3>
+            <p>Déploiement d'une architecture réseau segmentée pour une PME : configuration de VLANs, routage
+                inter-VLAN, protocoles OSPF/EIGRP et sécurisation des accès via ACLs et SSH.</p>
+            <div class="mission-tags">
+                <span class="tag">Cisco IOS</span>
+                <span class="tag">Packet Tracer</span>
+                <span class="tag">VLAN / STP</span>
+                <span class="tag">Routage Dynamique</span>
+            </div>
+        </div>
+
+        <div class="project-card fade-up">
+            <div class="project-header">
+                <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="project-links">
+                    <a href="https://b2-gp25.kevinpecro.info" class="project-link" title="Live" target="_blank"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <h3>Plateforme E-commerce Dynamique</h3>
+            <p>Création d'un site e-commerce complet avec un catalogue de produits, un panier d'achat qui mémorise les
+                articles, un espace client sécurisé et un tableau de bord pour gérer les stocks.</p>
+            <div class="mission-tags">
+                <span class="tag">PHP / Symfony</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Security (Hash)</span>
+                <span class="tag">MVC</span>
+            </div>
+        </div>
+
+        <div class="project-card fade-up">
+            <div class="project-header">
+                <div class="project-icon"><i class="fa-solid fa-terminal"></i></div>
+            </div>
+            <h3>Automatisation & Admin Système</h3>
+            <p>Conception de scripts robustes pour l'administration d'infrastructures Windows : automatisation des
+                tâches chronophages, provisionnement massif d'utilisateurs via CSV et audit de sécurité des groupes
+                Active Directory.</p>
+            <div class="mission-tags">
+                <span class="tag">PowerShell ISE</span>
+                <span class="tag">Active Directory</span>
+                <span class="tag">Windows Server 2022</span>
+                <span class="tag">Gestion d'incidents</span>
+            </div>
+        </div>
+
+        <div class="project-card fade-up">
+            <div class="project-header">
+                <div class="project-icon"><i class="fa-solid fa-cubes"></i></div>
+            </div>
+            <h3>Création Numérique & Moteurs 3D</h3>
+            <p>Par curiosité personnelle, j'explore l'univers de la création multimédia. Je possède des bases en montage
+                vidéo et en retouche photo, et je fais mes tous premiers pas (niveau grand débutant) sur la modélisation
+                avec Blender ainsi que sur les moteurs Unity et Unreal Engine. C'est un domaine annexe que je compte
+                bien approfondir !</p>
+            <div class="mission-tags">
+                <span class="tag">Montage Vidéo / Photo</span>
+                <span class="tag">Blender (Initiation)</span>
+                <span class="tag">Unreal Engine / Unity</span>
+                <span class="tag">Veille créative</span>
+            </div>
+        </div>
+
+        <div class="project-card fade-up">
+            <div class="project-header">
+                <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+            </div>
+            <h3>Méthode Agiles</h3>
+            <p>Pilotage d'un projet web en équipe via la <strong>méthode Agile</strong>. Organisation des sprints et
+                suivi des tickets sur <strong>Trello</strong> pour la répartition des tâches, couplé à un workflow Git
+                rigoureux.</p>
+            <div class="mission-tags">
+                <span class="tag">Méthode Agile</span>
+                <span class="tag">Trello / Kanban</span>
+                <span class="tag">GitFlow</span>
+                <span class="tag">JavaScript</span>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+</body>
+
+<site-footer></site-footer>
+
+</html>

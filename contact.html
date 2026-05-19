@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<theme-switcher></theme-switcher>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Dorian Decitre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- EmailJS CDN pour l'envoi de mails sans backend -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="components.js" defer></script>
+
+</head>
+<body>
+
+<canvas id="lightning-canvas"></canvas>
+
+<header id="dynamic-header" class="fade-up show">
+    <nav>
+        <button class="menu-burger" id="menu-toggle" aria-label="Menu">
+            <span class="barre"></span>
+            <span class="barre"></span>
+            <span class="barre"></span>
+        </button>
+        <ul id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="experience.html">Expérience</a></li>
+            <li><a href="reflexion.html">Réflexion</a></li>
+            <li><a href="references.html">Références</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <div class="page-header fade-up show">
+        <h1 class="page-title">Contact</h1>
+        <p class="page-subtitle">Une question, une opportunité ? Écrivez-moi directement.</p>
+    </div>
+
+    <div class="contact-layout">
+
+        <!-- FORMULAIRE -->
+        <div class="fade-up">
+            <form class="contact-form" id="contact-form" novalidate>
+
+                <div class="form-group">
+                    <label for="nom">Nom complet</label>
+                    <input type="text" id="nom" name="nom" placeholder="Jean Dupont" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sujet">Sujet</label>
+                    <input type="text" id="sujet" name="sujet" placeholder="Opportunité de stage, question...">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="7" placeholder="Bonjour Dorian, je vous contacte au sujet de..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-paper-plane"></i> ENVOYER
+                </button>
+
+                <p class="form-feedback" id="form-feedback"></p>
+
+            </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="contact-sidebar fade-up">
+
+            <div class="social-card">
+                <h3>Réseaux professionnels</h3>
+                <div class="social-links">
+
+                    <a href="https://linkedin.com/in/" target="_blank" class="social-link">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                        <i class="fa-solid fa-arrow-up-right social-arrow"></i>
+                    </a>
+
+                    <a href="https://github.com/" target="_blank" class="social-link">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                        <i class="fa-solid fa-arrow-up-right social-arrow"></i>
+                    </a>
+
+                    <a href="/picture/CV.pdf" target="_blank" class="social-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>CV</span>
+                        <i class="fa-solid fa-arrow-up-right social-arrow"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="contact-info-card">
+                <h3>Informations</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Amiens, Hauts-de-France</li>
+                    <li><i class="fa-solid fa-graduation-cap"></i> BUT2 RACA — UPJV</li>
+                    <li><i class="fa-solid fa-clock"></i> Réponse sous 48h</li>
+                    <li><i class="fa-solid fa-language"></i> Français · Anglais (B1)</li>
+                </ul>
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+</body>
+
+<site-footer></site-footer>
+
+</html>

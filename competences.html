@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<theme-switcher></theme-switcher>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences | Dorian Decitre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+    <script src="components.js" defer></script>
+
+</head>
+<body>
+
+<canvas id="lightning-canvas"></canvas>
+
+<header id="dynamic-header" class="fade-up show">
+    <nav>
+        <button class="menu-burger" id="menu-toggle" aria-label="Menu">
+            <span class="barre"></span>
+            <span class="barre"></span>
+            <span class="barre"></span>
+        </button>
+        <ul id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="competences.html" class="active">Compétences</a></li>
+            <li><a href="experience.html">Expérience</a></li>
+            <li><a href="reflexion.html">Réflexion</a></li>
+            <li><a href="references.html">Références</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <div class="page-header fade-up show">
+        <h1 class="page-title">Compétences</h1>
+        <p class="page-subtitle">Technologies et savoir-faire acquis en formation et sur le terrain.</p>
+    </div>
+
+    <!-- DÉVELOPPEMENT -->
+    <div class="skills-category fade-up">
+        <p class="category-title"><i class="fa-solid fa-code"></i> Développement</p>
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon">☕</div>
+                <h3>Java EE</h3>
+                <p>Architecture MVC, Servlets, JSP. Développement backend complet lors du stage A2LDS.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 78%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+                <h3>JSF / PrimeFaces</h3>
+                <p>Création d'interfaces riches et refonte de vues d'administration en interfaces client épurées.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 72%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-file-code"></i></div>
+                <h3>XHTML / HTML5 & CSS3</h3>
+                <p>Intégration sémantique, responsive design, animations CSS. Front-end propre et accessible.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 85%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                <h3>Python</h3>
+                <p>Scripts d'automatisation, traitement de données, projets académiques variés.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 60%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                <h3>SQL</h3>
+                <p>Requêtes complexes, modélisation de bases de données relationnelles, jointures, agrégations.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 70%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                <h3>JavaScript</h3>
+                <p>Interactivité DOM, animations, fetch API. Utilisé pour ce portfolio et des projets cours.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 55%"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="skills-category fade-up">
+        <h2 class="category-title"><i class="fa-solid fa-toolbox"></i> Environnements de Développement & Outils</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                <h3>VS Code</h3>
+                <p>Mon éditeur principal au quotidien. Je l'ai configuré sur mesure pour être le plus efficace possible, que ce soit pour mes développements web ou l'écriture de mes scripts PowerShell et Batch.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 90%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h3>Cursor</h3>
+                <p>J'utilise cet IDE assisté par l'IA pour coder plus intelligemment. Il m'aide énormément à accélérer mes phases de refactoring, générer des tests répétitifs ou cibler rapidement l'origine d'un bug.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 85%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-cube"></i></div>
+                <h3>Suite JetBrains (IntelliJ)</h3>
+                <p>Mon environnement de prédilection pour le Java. Je l'utilise pour mes projets back-end nécessitant une analyse de code approfondie et une gestion d'architecture robuste (Java EE, Spring).</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 80%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Eclipse</h3>
+                <p>J'ai consolidé le Java sur cet outil durant mon stage, et je continue de l'utiliser régulièrement pour les projets universitaires ou pour intervenir sur du code existant qui nécessite cet environnement spécifique.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 75%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+                <h3>Git & GitHub</h3>
+                <p>Je versionne systématiquement mes projets avec Git. GitHub me sert à la fois de sauvegarde de mon travail, mais aussi d'outil pour collaborer et suivre proprement l'avancée de mes développements.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 85%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>VMware / VirtualBox</h3>
+                <p>Des outils centraux dans mon cursus RACA. Je les utilise constamment pour monter des architectures réseaux de test, simuler des serveurs et m'entraîner à l'administration système locale.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 80%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-rocket"></i></div>
+                <h3>Postman</h3>
+                <p>Mon outil de référence dès que je développe une API. Il me fait gagner un temps précieux pour créer, valider mes requêtes HTTP et déboguer les échanges client-serveur avant même d'écrire le Front-End.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 70%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-figma"></i></div>
+                <h3>Figma</h3>
+                <p>Je préfère ne jamais coder une interface à l'aveugle. J'utilise Figma pour prototyper mes idées en amont, comme je l'ai fait pour concevoir mes maquettes lors de ma mission de refonte UI/UX en stage.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 65%"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SÉCURITÉ & PDF -->
+    <div class="skills-category fade-up">
+        <p class="category-title"><i class="fa-solid fa-shield-halved"></i> Sécurité & Document</p>
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-file-signature"></i></div>
+                <h3>iText (Signature PDF)</h3>
+                <p>Implémentation de signatures électroniques et horodatage TSA pour la certification de devis.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 65%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-lock"></i></div>
+                <h3>Bouncy Castle</h3>
+                <p>Cryptographie Java, gestion des certificats numériques et chaînes de confiance PKI.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 55%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-sitemap"></i></div>
+                <h3>Architecture MVC</h3>
+                <p>Conception et mise en œuvre d'architectures Modèle-Vue-Contrôleur robustes et maintenables.</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="--fill: 80%"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+</body>
+
+<site-footer></site-footer>
+
+</html>

@@ -1,201 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
+<theme-switcher></theme-switcher>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maison Macaron - Découvrez nos macarons artisanaux et créations de haute pâtisserie.">
-    <title>Maison Macaron | Haute Pâtisserie</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <title>Portfolio | Dorian Decitre</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <style>
-        /* TEST DE FORCE : On oblige le navigateur à appliquer l'Island et le Glass */
-        .dynamic-island-wrapper {
-            position: sticky !important;
-            top: 20px !important;
-            z-index: 1050 !important;
-            padding: 0 15px !important;
-        }
-
-        .glass-island {
-            background: rgba(255, 255, 255, 0.75) !important; /* Blanc transparent */
-            backdrop-filter: blur(16px) !important; /* Le flou */
-            -webkit-backdrop-filter: blur(16px) !important; /* Le flou pour Safari */
-            border: 1px solid rgba(255, 255, 255, 0.5) !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
-            border-radius: 50px !important; /* L'arrondi pilule */
-            padding: 0.5rem 2rem !important;
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-            transition: all 0.3s ease !important;
-        }
-
-        @media (max-width: 991px) {
-            .glass-island {
-                border-radius: 25px !important;
-                padding: 1rem !important;
-            }
-        }
-    </style>
+    <script src="components.js" defer></script>
 </head>
+<body>
 
-<body class="d-flex flex-column min-vh-100 bg-light">
+<canvas id="lightning-canvas"></canvas>
 
-<header class="dynamic-island-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-light glass-island">
-        <div class="container-fluid p-0">
+<!-- Header Dynamic Island / Liquid Glass -->
+<header id="dynamic-header" class="fade-up">
+    <nav>
+        <button class="menu-burger" id="menu-toggle" aria-label="Menu">
+            <span class="barre"></span>
+            <span class="barre"></span>
+            <span class="barre"></span>
+        </button>
 
-            <a class="navbar-brand luxe-serif text-dark fs-3 mb-0 me-4" href="index.html">
-                MAISON MACARON
-            </a>
-
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Basculer la navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-luxe active fw-medium" aria-current="page" href="#">Boutique</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-luxe fw-medium" href="#">Macarons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-luxe fw-medium" href="#">Événements</a>
-                    </li>
-                </ul>
-
-                <div class="d-flex align-items-center justify-content-end gap-4">
-
-                    <div class="search-luxe position-relative d-none d-lg-block" style="width: 250px;">
-                        <form class="w-100" role="search" id="searchForm" onsubmit="return false;">
-                            <div class="input-group align-items-center">
-                                <input class="form-control form-control-sm px-3" type="search" placeholder="Rechercher..."
-                                       aria-label="Rechercher" id="searchInput" autocomplete="off">
-                                <button class="btn btn-sm" type="submit" aria-label="Lancer la recherche">
-                                    <i class="fa-solid fa-magnifying-glass text-muted"></i>
-                                </button>
-                            </div>
-                        </form>
-
-                        <div id="searchResults" class="list-group position-absolute w-100 shadow-lg d-none rounded-4 mt-2"
-                             style="top: 100%; left: 0; z-index: 1050; max-height: 300px; overflow-y: auto; background: rgba(255,255,255,0.95);">
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="#" class="text-dark fs-5 position-relative text-decoration-none" aria-label="Mon compte">
-                            <i class="fa-regular fa-user"></i>
-                        </a>
-
-                        <a class="nav-link text-dark position-relative" href="#">
-                            <i class="fa-solid fa-cart-shopping fs-5"></i>
-                            <!-- Badge statique en HTML (tu pourras le dynamiser en JavaScript plus tard) -->
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-accent border border-white"
-                                  style="font-size: 0.6rem;">
-                                0
-                                <span class="visually-hidden">articles dans le panier</span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul id="nav-links">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="experience.html">Expérience</a></li>
+            <li><a href="reflexion.html">Réflexion</a></li>
+            <li><a href="references.html">Références</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 </header>
 
-<main class="flex-grow-1 p-0 m-0">
-    <!-- ========================================== -->
-    <!-- LE CONTENU CENTRAL DE TA PAGE D'ACCUEIL ICI -->
-    <!-- ========================================== -->
-    <div class="container mt-5 pt-5 text-center">
-        <h1>Bienvenue chez Maison Macaron</h1>
-        <p>Insère ici le contenu de ta page d'accueil.</p>
+<main class="hero-section">
+    <div class="hero-content">
+        <blockquote class="quote fade-up">
+            " Les paroles n'engagent à rien. Montrez-moi le code. " <br>
+            <span>- Linus Torvalds</span>
+        </blockquote>
+
+        <h1 class="fade-up">DORIAN <br> DECITRE</h1>
+        <h2 class="fade-up">PORTFOLIO PROFESSIONNEL — 2026</h2>
+
+        <div class="specialty-box fade-up">
+            <h3>Domaine de prédilection</h3>
+            <p>Étudiant en <strong>BUT2 RACA Informatique</strong> à Amiens.</p>
+            <p>Profil full-stack orienté <strong>développement d'applications</strong> et gestion <strong>d'infrastructures</strong>.</p>
+        </div>
+
+        <a href="https://b2-gp25.kevinpecro.info" class="btn-primary fade-up">DÉCOUVRIR MON TRAVAIL</a>
+    </div>
+
+    <div class="hero-image fade-up">
+        <!-- Couches pour le parallaxe souris -->
+        <img src="picture/decor.png" alt="" class="decor-layer js-mouse-parallax" data-vitesse="60">
+        <img src="picture/accueil.png" alt="Dorian Decitre" class="main-photo js-mouse-parallax" data-vitesse="30">
     </div>
 </main>
 
-<footer class="pt-5 pb-3 mt-auto" style="background-color: #1a1a1a; color: #f8f5f2;">
-    <div class="container text-md-left pt-4">
-        <div class="row text-md-left">
+<site-footer></site-footer>
 
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 luxe-serif fs-4 text-accent">
-                    Maison Macaron
-                </h5>
-                <p class="small" style="font-weight: 300; line-height: 1.8; color: #b3b3b3;">
-                    L'excellence de la haute pâtisserie française. Des créations artisanales élaborées avec passion et des ingrédients d'exception pour un voyage gustatif inoubliable.
-                </p>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fs-6" style="letter-spacing: 2px; color: #fff;">La Maison</h5>
-                <ul class="list-unstyled small" style="font-weight: 300; line-height: 2;">
-                    <li><a href="#" class="text-decoration-none" style="color: #b3b3b3; transition: color 0.3s;" onmouseover="this.style.color='#B89768'" onmouseout="this.style.color='#b3b3b3'">Notre Histoire</a></li>
-                    <li><a href="#" class="text-decoration-none" style="color: #b3b3b3; transition: color 0.3s;" onmouseover="this.style.color='#B89768'" onmouseout="this.style.color='#b3b3b3'">Nos Boutiques</a></li>
-                    <li><a href="#" class="text-decoration-none" style="color: #b3b3b3; transition: color 0.3s;" onmouseover="this.style.color='#B89768'" onmouseout="this.style.color='#b3b3b3'">FAQ & Service Client</a></li>
-                    <li><a href="#" class="text-decoration-none" style="color: #b3b3b3; transition: color 0.3s;" onmouseover="this.style.color='#B89768'" onmouseout="this.style.color='#b3b3b3'">Mentions Légales</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fs-6" style="letter-spacing: 2px; color: #fff;">Contact</h5>
-                <ul class="list-unstyled small" style="font-weight: 300; line-height: 2; color: #b3b3b3;">
-                    <li><i class="fa-solid fa-location-dot me-3 text-accent"></i> 15 Rue de la Paix, 75002 Paris</li>
-                    <li><i class="fa-solid fa-envelope me-3 text-accent"></i> contact@maison-macaron.fr</li>
-                    <li><i class="fa-solid fa-phone me-3 text-accent"></i> +33 1 23 45 67 89</li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fs-6" style="letter-spacing: 2px; color: #fff;">Lettre d'information</h5>
-                <p class="small mb-3" style="font-weight: 300; color: #b3b3b3;">Découvrez nos nouvelles collections en avant-première.</p>
-
-                <form class="d-flex border-bottom border-secondary mb-4 pb-1">
-                    <input type="email" class="form-control bg-transparent border-0 text-white shadow-none px-0" placeholder="Votre adresse e-mail" style="font-size: 0.85rem;" required>
-                    <button type="submit" class="btn btn-link text-accent p-0 text-decoration-none text-uppercase" style="font-size: 0.8rem; letter-spacing: 1px;">S'inscrire</button>
-                </form>
-
-                <div class="mt-4">
-                    <a href="#" class="text-white me-4 fs-5" style="transition: color 0.3s;" onmouseover="this.style.color='#B89768'" onmouseout="this.style.color='#fff'"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="text-white me-4 fs-5" style="transition: color 0.3s;" onmouseover="this.style.color='#B89768'" onmouseout="this.style.color='#fff'"><i class="fa-brands fa-pinterest-p"></i></a>
-                    <a href="#" class="text-white fs-5" style="transition: color 0.3s;" onmouseover="this.style.color='#B89768'" onmouseout="this.style.color='#fff'"><i class="fa-brands fa-facebook-f"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <hr class="mb-4 mt-5" style="border-color: #333;">
-
-        <div class="row align-items-center pb-2">
-            <div class="col-md-7 col-lg-8">
-                <!-- L'année est maintenant en texte statique -->
-                <p class="mb-0 small" style="color: #666; font-weight: 300;">
-                    © 2026 Maison Macaron. Tous droits réservés.
-                </p>
-            </div>
-            <div class="col-md-5 col-lg-4">
-                <div class="text-center text-md-end text-muted">
-                    <i class="fa-brands fa-cc-visa fs-4 me-3"></i>
-                    <i class="fa-brands fa-cc-mastercard fs-4 me-3"></i>
-                    <i class="fa-brands fa-cc-amex fs-4"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/dynamic-scrolling.js"></script>
 </body>
 </html>
