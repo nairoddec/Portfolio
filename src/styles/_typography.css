@@ -1,0 +1,54 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+  transition: background-color var(--duration-medium) ease, color var(--duration-medium) ease;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+blockquote {
+  font-style: italic;
+}

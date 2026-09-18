@@ -1,0 +1,58 @@
+/* Lando Norris Text Hover Animation */
+:root {
+  --animation-time: 25ms;
+}
+
+.lando-text-hover {
+  text-decoration: none;
+  overflow: hidden;
+  display: inline-flex; /* Use flex to keep spans aligned properly */
+}
+
+.lando-text-hover span {
+  position: relative;
+  display: inline-block;
+  color: transparent; /* Hide the real text */
+}
+
+/* ::before is the initial state text */
+/* ::after is the hovered state text that comes from below */
+.lando-text-hover span::before,
+.lando-text-hover span::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: attr(data-char);
+  color: var(--color-text); /* Default color, can be overridden */
+  transition: transform calc(var(--animation-time) * 10) cubic-bezier(0.76, 0, 0.24, 1), 
+              opacity calc(var(--animation-time) * 10) cubic-bezier(0.76, 0, 0.24, 1);
+  transition-delay: calc(var(--index) * var(--animation-time));
+}
+
+.lando-text-hover span::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Position the after element below the visible area initially */
+.lando-text-hover span::after {
+  transform: translateY(100%);
+  opacity: 0;
+  color: var(--color-accent); /* Usually red like Ferrari */
+}
+
+/* Hover state */
+.lando-text-hover:hover span::before {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.lando-text-hover:hover span::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* For links specifically */
+a.lando-text-hover {
+  cursor: pointer;
+}

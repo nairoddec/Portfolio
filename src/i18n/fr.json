@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "reflection": "Réflexion",
+    "contact": "Contact",
+    "theme_toggle": "Changer de thème"
+  },
+  "hero": {
+    "quote": "« Les paroles n'engagent à rien. Montrez-moi le code. »",
+    "quote_author": "— Linus Torvalds",
+    "title_first": "DORIAN",
+    "title_last": "DECITRE",
+    "subtitle": "PORTFOLIO PROFESSIONNEL — 2026",
+    "specialty_title": "Domaine de prédilection",
+    "specialty_desc1": "Étudiant en BUT2 RACA Informatique à Amiens.",
+    "specialty_desc2": "Profil full-stack orienté développement d'applications et gestion d'infrastructures.",
+    "cta": "DÉCOUVRIR MON TRAVAIL",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "label": "À propos",
+    "title": "Mieux me<br>connaître",
+    "desc": "Entre développement applicatif et infrastructure système — découvrez mon profil hybride."
+  },
+  "skills": {
+    "label": "Compétences",
+    "title": "Technologies &<br>savoir-faire",
+    "desc": "Technologies et savoir-faire acquis en formation et sur le terrain."
+  },
+  "experience": {
+    "label": "Expérience",
+    "title": "Monde<br>professionnel",
+    "desc": "Stage et projets académiques."
+  },
+  "projects": {
+    "label": "Projets",
+    "title": "Projets Académiques<br>& Réalisations"
+  },
+  "reflection": {
+    "label": "Réflexion",
+    "title": "Bilan &<br>perspectives",
+    "desc": "Bilan critique et personnel de mon parcours en BUT2 et de mon stage."
+  },
+  "references": {
+    "label": "Références",
+    "title": "Témoignages",
+    "desc": "Personnes pouvant témoigner de mon travail et de mon sérieux."
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Travaillons<br>ensemble",
+    "desc": "Une question, une opportunité ? Écrivez-moi directement.",
+    "form_name": "Nom complet",
+    "form_email": "Adresse email",
+    "form_subject": "Sujet",
+    "form_message": "Message",
+    "submit": "ENVOYER"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}

@@ -1,0 +1,17 @@
+.about-section, .skills-section, .projects-section, .contact-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}

@@ -1,0 +1,95 @@
+.skills-categories {
+  display: block;
+}
+
+.skills-category:not(:first-child) {
+  padding-top: 6rem;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-muted);
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: transform var(--duration-fast) ease, border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 30px var(--color-accent-glow);
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-text);
+  transition: color var(--duration-fast) ease;
+}
+
+.skill-card:hover .skill-icon {
+  color: var(--color-accent);
+  border-color: var(--color-accent-glow);
+}
+
+.skill-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-bar {
+  height: 3px;
+  background-color: var(--color-bg-2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+}
+
+.skill-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  width: 0; /* Sera animé via JS jusqu'à var(--fill) */
+  transition: width 1.5s var(--ease-out-expo);
+}

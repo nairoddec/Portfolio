@@ -1,68 +1,116 @@
-<!DOCTYPE html>
-<html lang="fr">
-<theme-switcher></theme-switcher>
+<!doctype html>
+<html lang="fr" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Dorian Decitre</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="js/script.js" defer></script>
-
-    <script src="components.js" defer></script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dorian Decitre — Portfolio professionnel</title>
+  <meta name="description" content="Portfolio de Dorian Decitre : développement full-stack, administration système et infrastructures réseau.">
+  <meta property="og:title" content="Dorian Decitre — Portfolio professionnel"><meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <div id="loader" role="status" aria-label="Chargement"><span class="loader-spinner"></span></div>
+  <canvas id="canvas" aria-hidden="true"></canvas>
 
-<canvas id="lightning-canvas"></canvas>
+  <header><nav class="nav" id="main-nav" aria-label="Navigation principale"><div class="nav-container">
+    <a href="#hero" class="nav-logo" aria-label="Accueil">DD</a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active" data-section="hero">Accueil</a></li><li><a href="#about" class="nav-link" data-section="about">À propos</a></li><li><a href="#skills" class="nav-link" data-section="skills">Compétences</a></li><li><a href="#experience" class="nav-link" data-section="experience">Expérience</a></li><li><a href="#projects" class="nav-link" data-section="projects">Projets</a></li><li><a href="#reflection" class="nav-link" data-section="reflection">Réflexion</a></li><li><a href="#references" class="nav-link" data-section="references">Références</a></li>
+    </ul>
+    <div class="nav-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Changer de thème"><i class="fa-solid fa-moon"></i></button><a href="#contact" class="nav-cta">Contact</a></div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Ouvrir le menu"><span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span></button>
+  </div></nav></header>
+  <div class="mobile-menu" id="mobile-menu"><div class="mobile-menu-content">
+    <a href="#hero" class="mobile-link" data-section="hero">Accueil</a><a href="#about" class="mobile-link" data-section="about">À propos</a><a href="#skills" class="mobile-link" data-section="skills">Compétences</a><a href="#experience" class="mobile-link" data-section="experience">Expérience</a><a href="#projects" class="mobile-link" data-section="projects">Projets</a><a href="#reflection" class="mobile-link" data-section="reflection">Réflexion</a><a href="#references" class="mobile-link" data-section="references">Références</a><a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+  </div></div>
 
-<!-- Header Dynamic Island / Liquid Glass -->
-<header id="dynamic-header" class="fade-up">
-    <nav>
-        <button class="menu-burger" id="menu-toggle" aria-label="Menu">
-            <span class="barre"></span>
-            <span class="barre"></span>
-            <span class="barre"></span>
-        </button>
+  <main>
+    <section class="hero section" id="hero"><div class="hero-bg"></div><div class="hero-container">
+      <blockquote class="hero-quote fade-up">« Les paroles n'engagent à rien. Montrez-moi le code. »<span>— Linus Torvalds</span></blockquote>
+      <h1 class="hero-title">Dorian<br>Decitre</h1><p class="hero-subtitle">Portfolio professionnel — 2026</p>
+      <div class="hero-specialty fade-up"><h2>Domaine de prédilection</h2><p>Étudiant en <strong>BUT2 RACA Informatique</strong> à Amiens.</p><p>Profil full-stack orienté développement d'applications et gestion d'infrastructures.</p></div>
+      <a href="#about" class="hero-cta fade-up">Découvrir mon travail</a>
+    </div><div class="hero-scroll-indicator"><span>Défiler</span><div class="scroll-arrow"><i class="fa-solid fa-chevron-down"></i></div></div></section>
 
-        <ul id="nav-links">
-            <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="competences.html">Compétences</a></li>
-            <li><a href="experience.html">Expérience</a></li>
-            <li><a href="reflexion.html">Réflexion</a></li>
-            <li><a href="references.html">Références</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <section class="section" id="about"><div class="container">
+      <div class="section-header fade-up"><p class="section-label"><span>À propos</span></p><h2 class="section-title">Mieux me<br>connaître</h2><p class="section-description">Entre développement applicatif et infrastructure système : découvrez mon profil hybride.</p></div>
+      <div class="about-grid"><div class="about-main">
+        <article class="about-section fade-up"><h3>Mon parcours & ma vision</h3><p>Étudiant en BUT2 parcours Réalisation d'applications à l'IUT d'Amiens, j'ai développé un profil hybride entre développement logiciel et administration système. Mon stage chez <strong>A2LDS</strong> a consolidé mon expertise en conception applicative dans un environnement de production.</p><p>Je m'intéresse à toute la chaîne : de l'architecture réseau qui supporte l'application jusqu'à l'automatisation des tâches par des scripts précis.</p><blockquote class="about-quote">« Je ne me contente pas de faire fonctionner le code : je veux comprendre pourquoi il fonctionne. »</blockquote></article>
+        <article class="about-section fade-up"><h3>Ma façon de travailler</h3><p>J'aborde chaque développement en pensant à son architecture, à sa maintenabilité et à ses utilisateurs. L'autonomie acquise en entreprise m'a appris la valeur d'une documentation claire et d'une bonne compréhension du besoin avant de coder.</p></article>
+        <article class="about-section fade-up"><h3>Mes acquis</h3><p><strong>Côté développement :</strong> Java EE (Jakarta), architectures MVC, refonte d'interfaces UI/UX et requêtes SQL/JDBC.</p><p><strong>Côté infrastructure :</strong> réseaux, automatisation système avec PowerShell et Batch, et administration de postes Windows.</p></article>
+        <article class="about-section fade-up"><h3>Veille technologique</h3><p>Passionné de tech, je suis les évolutions logicielles et matérielles pour garder un regard moderne et pertinent sur les projets que je réalise.</p></article>
+      </div><aside class="about-sidebar">
+        <div class="profile-card fade-up"><div class="profile-pic-placeholder"><i class="fa-solid fa-user"></i></div><h3>Dorian Decitre</h3><p class="tagline">Polyvalent Dev & SysAdmin</p><div class="profile-badges"><span class="profile-badge">BUT RACA</span><span class="profile-badge">Amiens</span><span class="profile-badge">Java EE</span><span class="profile-badge">PowerShell</span></div></div>
+        <div class="stat-grid fade-up"><div class="stat-card"><div class="stat-number" data-value="8">0</div><div class="stat-label">Semaines de stage</div></div><div class="stat-card"><div class="stat-number" data-value="2">0</div><div class="stat-label">Missions pro</div></div><div class="stat-card"><div class="stat-number" data-value="60">0</div><div class="stat-label">% autonomie</div></div></div>
+        <div class="list-box fade-up"><h4><i class="fa-solid fa-star"></i> Qualités pro</h4><ul><li>Analyse de programme</li><li>Rigueur du code</li><li>Adaptabilité</li><li>Autonomie technique</li></ul></div>
+      </aside></div>
+    </div></section>
 
-<main class="hero-section">
-    <div class="hero-content">
-        <blockquote class="quote fade-up">
-            " Les paroles n'engagent à rien. Montrez-moi le code. " <br>
-            <span>- Linus Torvalds</span>
-        </blockquote>
+    <section class="section" id="skills"><div class="container">
+      <div class="section-header fade-up"><p class="section-label"><span>Compétences</span></p><h2 class="section-title">Technologies &<br>savoir-faire</h2><p class="section-description">Technologies et savoir-faire acquis en formation et sur le terrain.</p></div><div class="skills-categories">
+        <div class="skills-category fade-up"><p class="category-title"><i class="fa-solid fa-code"></i> Développement</p><div class="skills-grid">
+          <article class="skill-card"><div class="skill-icon">☕</div><h3>Java EE</h3><p>Architecture MVC, Servlets, JSP et développement backend complet.</p><div class="skill-bar"><div class="skill-fill" style="--fill:78%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-brands fa-java"></i></div><h3>JSF / PrimeFaces</h3><p>Interfaces riches et composants réutilisables.</p><div class="skill-bar"><div class="skill-fill" style="--fill:72%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-solid fa-file-code"></i></div><h3>HTML, CSS & JS</h3><p>Intégration responsive, accessible et interactive.</p><div class="skill-bar"><div class="skill-fill" style="--fill:85%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-brands fa-python"></i></div><h3>Python</h3><p>Scripts d'automatisation et traitement de données.</p><div class="skill-bar"><div class="skill-fill" style="--fill:60%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-solid fa-database"></i></div><h3>SQL</h3><p>Modélisation, jointures et requêtes relationnelles.</p><div class="skill-bar"><div class="skill-fill" style="--fill:70%"></div></div></article>
+        </div></div>
+        <div class="skills-category fade-up"><p class="category-title"><i class="fa-solid fa-toolbox"></i> Outils & environnements</p><div class="skills-grid">
+          <article class="skill-card"><div class="skill-icon"><i class="fa-solid fa-code"></i></div><h3>VS Code & Cursor</h3><p>Éditeurs configurés pour développer efficacement.</p><div class="skill-bar"><div class="skill-fill" style="--fill:90%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-solid fa-cube"></i></div><h3>IntelliJ</h3><p>Environnement privilégié pour Java et le backend.</p><div class="skill-bar"><div class="skill-fill" style="--fill:80%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div><h3>Git & GitHub</h3><p>Versionnement, collaboration et suivi des évolutions.</p><div class="skill-bar"><div class="skill-fill" style="--fill:85%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div><h3>VMware / VirtualBox</h3><p>Architectures de test et administration locale.</p><div class="skill-bar"><div class="skill-fill" style="--fill:80%"></div></div></article>
+        </div></div>
+        <div class="skills-category fade-up"><p class="category-title"><i class="fa-solid fa-shield-halved"></i> Sécurité & architecture</p><div class="skills-grid">
+          <article class="skill-card"><div class="skill-icon"><i class="fa-solid fa-file-signature"></i></div><h3>Signature PDF</h3><p>Signatures électroniques, horodatage et iText.</p><div class="skill-bar"><div class="skill-fill" style="--fill:65%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-solid fa-lock"></i></div><h3>Bouncy Castle</h3><p>Cryptographie Java et certificats numériques.</p><div class="skill-bar"><div class="skill-fill" style="--fill:55%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon"><i class="fa-solid fa-sitemap"></i></div><h3>Architecture MVC</h3><p>Applications robustes, lisibles et maintenables.</p><div class="skill-bar"><div class="skill-fill" style="--fill:80%"></div></div></article>
+        </div></div>
+      </div>
+    </div></section>
 
-        <h1 class="fade-up">DORIAN <br> DECITRE</h1>
-        <h2 class="fade-up">PORTFOLIO PROFESSIONNEL — 2026</h2>
+    <section class="section" id="experience"><div class="container">
+      <div class="section-header fade-up"><p class="section-label"><span>Expérience</span></p><h2 class="section-title">Monde<br>professionnel</h2><p class="section-description">Stage et projets académiques.</p></div>
+      <div class="exp-context fade-up"><div class="exp-context-inner"><div class="exp-badge"><i class="fa-solid fa-building"></i></div><div><h2><span class="highlight">A2LDS</span> — Stage développeur</h2><p class="exp-meta">Prestataire informatique · Bornel · Janvier – Mars 2026 · 8 semaines</p><p class="exp-desc">Développement et maintenance évolutive d'une application de gestion en Java EE, refonte sécurisée de l'espace client avec JSF/PrimeFaces et création d'un audit matériel/logiciel hybride Batch et PowerShell exporté en JSON.</p></div></div></div><h3 class="subsection-heading fade-up">Missions clés</h3>
+      <div class="mission-grid">
+        <article class="mission-card fade-up" data-cursor="VIEW"><div class="mission-number">01</div><div class="mission-media"><img src="/picture/A2LDS_1.png" alt="Capture de l'outil d'audit A2LDS"></div><div class="mission-content"><div class="mission-icon"><i class="fa-solid fa-terminal"></i></div><h3>Outil d'audit hybride</h3><p>Remplacement de WMIC par une solution Batch et PowerShell, avec collecte du matériel et des logiciels puis formatage JSON.</p><div class="mission-tags"><span class="tag">Batch / PowerShell</span><span class="tag">JSON</span><span class="tag">WMIC</span></div></div></article>
+        <article class="mission-card fade-up" data-cursor="VIEW"><div class="mission-number">02</div><div class="mission-media"><img src="/picture/A2LDS_2.png" alt="Capture de l'espace client A2LDS"></div><div class="mission-content"><div class="mission-icon"><i class="fa-solid fa-layer-group"></i></div><h3>Refonte espace client</h3><p>Transformation de vues d'administration en portail client intuitif, avec composants composites PrimeFaces.</p><div class="mission-tags"><span class="tag">Java EE</span><span class="tag">JSF / PrimeFaces</span><span class="tag">DRY</span></div></div></article>
+        <article class="mission-card fade-up"><div class="mission-number">03</div><div class="mission-icon"><i class="fa-solid fa-file-pdf"></i></div><h3>Cycle de vie & PDF</h3><p>Verrouillage des formulaires selon le contexte et visionneuse de devis et factures sans téléchargement forcé.</p><div class="mission-tags"><span class="tag">JSF</span><span class="tag">Sécurité</span><span class="tag">PDF</span></div></article>
+      </div>
+    </div></section>
 
-        <div class="specialty-box fade-up">
-            <h3>Domaine de prédilection</h3>
-            <p>Étudiant en <strong>BUT2 RACA Informatique</strong> à Amiens.</p>
-            <p>Profil full-stack orienté <strong>développement d'applications</strong> et gestion <strong>d'infrastructures</strong>.</p>
-        </div>
+    <section class="section" id="projects"><div class="container">
+      <div class="section-header fade-up"><p class="section-label"><span>Projets</span></p><h2 class="section-title">Projets académiques<br>& réalisations</h2></div><div class="projects-grid">
+        <article class="project-card fade-up" data-cursor="VIEW"><div class="project-media"><img src="/picture/cisco.png" alt="Architecture réseau Cisco"></div><div class="project-content"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-network-wired"></i></div></div><h3>Infrastructure réseau Cisco</h3><p>Architecture segmentée pour une PME : VLAN, routage inter-VLAN, OSPF/EIGRP, ACL et SSH.</p><div class="mission-tags"><span class="tag">Cisco IOS</span><span class="tag">Packet Tracer</span><span class="tag">VLAN</span></div></div></article>
+        <article class="project-card fade-up"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div></div><h3>Plateforme e-commerce</h3><p>Catalogue, panier, espace client sécurisé et tableau de bord de gestion des stocks.</p><div class="mission-tags"><span class="tag">PHP / Symfony</span><span class="tag">JavaScript</span><span class="tag">MVC</span></div></article>
+        <article class="project-card fade-up"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-terminal"></i></div></div><h3>Automatisation système</h3><p>Scripts d'administration Windows : provisionnement via CSV et audit de groupes Active Directory.</p><div class="mission-tags"><span class="tag">PowerShell</span><span class="tag">Active Directory</span><span class="tag">Windows Server</span></div></article>
+        <article class="project-card fade-up"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-cubes"></i></div></div><h3>Création numérique & 3D</h3><p>Exploration du montage, de Blender, Unity et Unreal Engine, par curiosité personnelle.</p><div class="mission-tags"><span class="tag">Blender</span><span class="tag">Unity</span><span class="tag">Unreal Engine</span></div></article>
+        <article class="project-card fade-up"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-globe"></i></div></div><h3>Méthodes agiles</h3><p>Pilotage de projet en équipe avec sprints, Trello et un workflow Git rigoureux.</p><div class="mission-tags"><span class="tag">Agile</span><span class="tag">Trello</span><span class="tag">GitFlow</span></div></article>
+      </div>
+    </div></section>
 
-        <a href="https://b2-gp25.kevinpecro.info" class="btn-primary fade-up">DÉCOUVRIR MON TRAVAIL</a>
-    </div>
+    <section class="section" id="reflection"><div class="container">
+      <div class="section-header fade-up"><p class="section-label"><span>Réflexion</span></p><h2 class="section-title">Bilan &<br>perspectives</h2><p class="section-description">Bilan critique et personnel de mon parcours en BUT2 et de mon stage.</p></div><div class="reflection-layout"><div class="reflection-main">
+        <article class="reflexion-block fade-up"><div class="reflexion-icon"><i class="fa-solid fa-graduation-cap"></i></div><h3>Ce que la formation m'a apporté</h3><p>Le BUT RACA m'a donné une vision globale de l'informatique : architecture, organisation et logique derrière chaque choix technique. Les projets en équipe m'ont appris à collaborer et à livrer dans des délais contraints.</p></article>
+        <article class="reflexion-block fade-up"><div class="reflexion-icon"><i class="fa-solid fa-briefcase"></i></div><h3>Le stage : décalage et confirmation</h3><p>La maintenance d'une base existante, les conventions maison et les bugs de production ont confirmé mon envie de travailler sur des défis concrets. La signature PDF m'a particulièrement marqué.</p></article>
+        <article class="reflexion-block fade-up"><div class="reflexion-icon"><i class="fa-solid fa-chart-line"></i></div><h3>Axes de progression</h3><p>Je souhaite progresser dans la communication technique, la documentation, le DevOps, les microservices, Docker et le front-end moderne.</p></article>
+        <article class="reflexion-block fade-up"><div class="reflexion-icon"><i class="fa-solid fa-compass"></i></div><h3>Projet professionnel</h3><p>Mon objectif est d'évoluer vers l'ingénierie IA, en poursuivant mes études avec une spécialisation Intelligence Artificielle et Data Science.</p></article>
+      </div><aside class="reflection-sidebar"><div class="insight-card fade-up"><h4><i class="fa-solid fa-code"></i> La règle du clean code</h4><blockquote>« Les bons programmeurs écrivent du code que les humains peuvent comprendre. »</blockquote><span>— Martin Fowler</span></div><div class="insight-card fade-up"><h4><i class="fa-solid fa-chart-bar"></i> En chiffres</h4><ul class="stats-list"><li><strong>8</strong> semaines de stage</li><li><strong>2</strong> missions majeures</li><li><strong>+8</strong> technologies utilisées</li><li><strong>1</strong> certification PDF livrée</li></ul></div></aside></div>
+    </div></section>
 
-    <div class="hero-image fade-up">
-        <!-- Couches pour le parallaxe souris -->
-        <img src="picture/decor.png" alt="" class="decor-layer js-mouse-parallax" data-vitesse="60">
-        <img src="picture/accueil.png" alt="Dorian Decitre" class="main-photo js-mouse-parallax" data-vitesse="30">
-    </div>
-</main>
+    <section class="section" id="references"><div class="container">
+      <div class="section-header fade-up"><p class="section-label"><span>Références</span></p><h2 class="section-title">Témoignages</h2><p class="section-description">Personnes pouvant témoigner de mon travail et de mon sérieux.</p></div><div class="ref-grid"><article class="ref-card fade-up"><div class="ref-avatar">SD</div><h3>Sébastien Dos Santos</h3><p class="ref-role">Tuteur de stage · Développeur senior — A2LDS</p><p class="ref-text">« Sérieux et impliqué, il sait s'adapter rapidement à un environnement technique complexe et travailler efficacement. »</p><h4 class="ref-section-title">Axe d'amélioration</h4><p class="ref-text">« Développer encore sa vision globale des infrastructures informatiques. »</p><p class="ref-contact"><i class="fa-solid fa-envelope"></i> Coordonnées disponibles sur demande</p></article></div><div class="ref-note fade-up"><i class="fa-solid fa-circle-info"></i><p>Les coordonnées complètes de mes références sont disponibles sur demande, dans le cadre d'une démarche de recrutement sérieuse et avec l'accord préalable des personnes concernées.</p></div>
+    </div></section>
 
-<site-footer></site-footer>
+    <section class="section" id="contact"><div class="container">
+      <div class="section-header fade-up"><p class="section-label"><span>Contact</span></p><h2 class="section-title">Travaillons<br>ensemble</h2><p class="section-description">Une question ou une opportunité ? Écrivez-moi directement.</p></div><div class="contact-layout"><div class="fade-up"><form class="contact-form" id="contact-form" novalidate><div class="form-group"><label for="nom">Nom complet</label><input id="nom" name="nom" type="text" placeholder="Jean Dupont" required></div><div class="form-group"><label for="email">Adresse email</label><input id="email" name="email" type="email" placeholder="jean@exemple.fr" required></div><div class="form-group"><label for="sujet">Sujet</label><input id="sujet" name="sujet" type="text" placeholder="Opportunité, question…"></div><div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Bonjour Dorian…" required></textarea></div><button type="submit" class="btn-submit" id="btn-submit"><i class="fa-solid fa-paper-plane"></i> Envoyer</button><p class="form-feedback" id="form-feedback" aria-live="polite"></p></form></div><aside class="contact-sidebar fade-up"><div class="social-card"><h3>Réseaux professionnels</h3><div class="social-links"><a href="https://www.linkedin.com/in/dorian-decitre/" target="_blank" rel="noreferrer" class="social-link"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-up-right social-arrow"></i></a><a href="https://github.com/nairoddec" target="_blank" rel="noreferrer" class="social-link"><i class="fa-brands fa-github"></i><span>GitHub</span><i class="fa-solid fa-arrow-up-right social-arrow"></i></a><a href="/picture/CV.pdf" target="_blank" class="social-link"><i class="fa-solid fa-file-lines"></i><span>Télécharger mon CV</span><i class="fa-solid fa-download social-arrow"></i></a></div></div><div class="contact-info-card"><h3>Informations</h3><ul><li><i class="fa-solid fa-location-dot"></i> Amiens, Hauts-de-France</li><li><i class="fa-solid fa-graduation-cap"></i> BUT2 RACA — UPJV</li><li><i class="fa-solid fa-clock"></i> Réponse sous 48 h</li><li><i class="fa-solid fa-language"></i> Français · Anglais (B1)</li></ul></div></aside></div>
+    </div></section>
+  </main>
 
+  <footer class="site-footer"><div class="footer-content"><div class="footer-logo"><h3>Dorian Decitre</h3><p>Étudiant BUT2 RACA Informatique</p></div><div class="footer-social"><h4>Réseaux</h4><div class="social-icons"><a href="https://github.com/nairoddec" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/in/dorian-decitre/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="mailto:contact@doriandecitre.fr" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div></div></div><div class="footer-bottom"><p>© 2026 Dorian Decitre. Tous droits réservés.</p></div></footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true"><div class="lightbox-overlay"></div><div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Aperçu du projet"><button id="lightbox-close" class="lightbox-close" type="button" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button><div id="lightbox-card"></div><div class="lightbox-controls"><button id="lightbox-prev" type="button" aria-label="Précédent"><i class="fa-solid fa-arrow-left"></i></button><span id="lightbox-counter"></span><button id="lightbox-next" type="button" aria-label="Suivant"><i class="fa-solid fa-arrow-right"></i></button></div></div></div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
